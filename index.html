@@ -173,7 +173,7 @@
       </button>
     </header>
     <!-- end of header -->
-    
+
     <!-- collection -->
     <section id="collection" class="py-5">
       <div class="container">
@@ -378,15 +378,30 @@
     </section>
     <!-- end of collection -->
 
-
-    <section class="container text-center">
+    <section class="container d-flex justify-content-between">
+      <div>
         <h1 id="year" class="text-center">Hello Title</h1>
         <h3 id="type">Year</h3>
         <h2 id="number">Number</h2>
-        <p id="text">Type</p>        
+        <p id="text">Type</p>
+      </div>
+
+      <div>
+        <h1>Upload an Image</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" name="image" accept=".jpg, .jpeg, .png" />
+          <button type="submit">Upload</button>
+        </form>
+
+        <!-- Display uploaded image here -->
+        <h2>Uploaded Image:</h2>
+        <img id="uploadedImage" src="" alt="Uploaded Image" />
+
+        <!-- Display upload status -->
+        <div id="uploadStatus"></div>
+        
+      </div>
     </section>
-
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
