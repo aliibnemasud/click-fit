@@ -110,9 +110,28 @@ p {
     border-radius: 50%;
 }
 
+
+.users-table {
+    height: 300px;
+}
+
+.action-button {
+    border: none;
+    background: transparent;
+}
+
+.action-button .fa-trash-alt {
+    color: rgb(189, 3, 3);
+}
+
+
+
 /* media queries */
 @media(min-width: 992px){
     .nav-item{
         border-bottom: none;
     }
 }
+
+
+
