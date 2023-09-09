@@ -340,7 +340,6 @@
     <!-- end of collection -->
 
     <!-- Upload Image Section start -->
-
     <section>
       <div class="title text-center">
         <h2 class="position-relative d-inline-block my-5">Upload Image</h2>
@@ -357,7 +356,7 @@
                 accept=".jpg, .jpeg, .png"
               />
               <button class="btn btn-success mt-2" type="submit">Upload</button>
-              <button type="button">Upload</button>
+              <!-- <button type="button">Upload</button> -->
             </form>
           </div>
         </div>
@@ -371,20 +370,86 @@
         </div>
       </div>
     </section>
+    <!-- Upload Image Section end -->
 
-    <!-- Data fetching from the api -->
-    <section class="d-flex">
-      <div class="w-50"></div>
-
-      <div class="w-50">
-       <!--  <h6 class="text-primary fw-bold">
-          <span id="year"></span> | <span id="type"></span> |
-          <span id="number"></span>
-        </h6>
-        <p id="text">Type</p> -->
+    <!-- Add Product Section -->
+    <section class="container my-5">
+      <div class="title text-center">
+        <h2 class="position-relative d-inline-block my-5">Add Product</h2>
       </div>
-    </section>
 
+      <form id="myForm" class="w-50 mx-auto">
+        <div class="d-flex justify-content-between gap-2">
+          <div class="mb-3 w-50">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+  
+          <div class="mb-3 w-50">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              aria-describedby="passwordHelpBlock"
+              required
+            />
+            <div id="passwordHelpBlock" class="form-text"></div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between gap-2">
+          <div class="mb-3 w-50">
+            <label for="type" class="form-label"
+              >Type</label
+            >
+            <input
+              class="form-control"
+              list="types"
+              id="type"
+              required
+              placeholder="Write a Type"
+            />
+            <datalist id="types">
+              <option value="Best Sellers"></option>
+              <option value="Featured"></option>
+              <option value="New Arrival"></option>
+            </datalist>
+          </div>
+  
+          <div class="mb-3 w-50">
+            <label for="status" class="form-label"
+            >Status</label
+          >
+            <select class="form-select" aria-label="Status" id="status">
+              <option selected value="1">Select Status</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+
+       <div class="text-center">
+        <button type="submit" class="btn btn-secondary">
+          Add Products
+        </button>
+       </div>
+      </form>
+
+
+    </section>
+    <!-- Add Product Section -->
+
+    <!-- Footer Start -->
     <footer class="bg-dark text-white py-4">
       <div class="container">
         <div class="row">
@@ -396,8 +461,9 @@
               class="img-fluid my-3"
             />
             <h6 class="text-primary fw-bold">
-              <span id="year"></span> | <span id="type"></span> |
-              <span id="number"></span>
+              <span id="year" class="text-white"></span> |
+              <span id="type" class="text-white"></span> |
+              <span id="number" class="text-white"></span>
             </h6>
             <p id="text" class="pr-1">Type</p>
           </div>
@@ -438,6 +504,7 @@
         </div>
       </div>
     </footer>
+    <!-- Footer End -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -452,14 +519,14 @@
     <script src="js/main.js"></script>
 
     <script>
-      $(document).ready(function () {
+      /* $(document).ready(function () {
         // Change background image of a div by clicking on the button
         $("button").click(function () {
-          var imageUrl =
+          const imageUrl =
             "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
           $(".image-border").css("background-image", "url(" + imageUrl + ")");
         });
-      });
+      }); */
     </script>
   </body>
 </html>
