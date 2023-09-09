@@ -71,7 +71,8 @@ $(document).ready(function () {
         $("#password").val("");
         $("#type").val("");
         $("#status").val("");
-        alert("Product Added Successfully!!!");
+        // alert("Product Added Successfully!!!");
+        location.reload()
       });
   });
 });
@@ -95,7 +96,9 @@ const fetchUsers = () => {
           })" class="action-button"data-bs-toggle="modal" data-bs-target="#editModal">
               <i class="fas fa-edit"></i>
           </button>
-          <button class="action-button">
+          <button onclick="deleteUser(${
+            user?.id
+          })" class="action-button">
               <i class="fas fa-trash-alt"></i>
           </button>
         </div>
@@ -110,7 +113,6 @@ const fetchUsers = () => {
 fetchUsers();
 
 let updateId;
-
 const showData = async (data) => {
   await fetch(`http://localhost:5000/user/getUser/${data}`)
     .then((res) => res.json())
@@ -127,21 +129,17 @@ const showData = async (data) => {
 // Hello
 
 $(document).ready(
-  $("#updatedUser").click( function () {
-
+  $("#updatedUser").click(function () {
     const email = $("#eemail").val();
     const password = $("#epassword").val();
     const type = $("#etype").val();
     const status = $("#estatus").val();
-
     const userData = {
       email: email,
       password: password,
       type: type,
       active: status,
     };
-
-    console.log(userData);
 
     fetch(`http://localhost:5000/user/updateUser/${updateId}`, {
       method: "PATCH",
@@ -152,12 +150,33 @@ $(document).ready(
     })
       .then((res) => res.json())
       .then((data) => {
-      $("#eemail").val("");
-      $("#epassword").val("");
-      $("#etype").val("");
-      $("#estatus").val("");
-      $('#editModal').modal('hide');
-      alert("Data Updated Successfully!")
+        /* $("#eemail").val("");
+        $("#epassword").val("");
+        $("#etype").val("");
+        $("#estatus").val(""); */
+        $("#editModal").modal("hide");
+        location.reload()
       });
   })
 );
+
+// delete a user
+
+const deleteUser = async (data) => {
+  const confirm = window.confirm("Want to Delete this user?");
+
+  console.log(data)
+
+  if (confirm) {
+    await fetch(`http://localhost:5000/user/deleteUser/${data}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        location.reload()
+      });
+  }
+};
