@@ -18,6 +18,10 @@ body{
     font-family: var(--sm-font);
 }
 
+p {
+    margin: 0;
+}
+
 /* button */
 .bg-primary{
     background-color: var(--pink)!important;

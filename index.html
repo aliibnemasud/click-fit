@@ -96,45 +96,6 @@
     </nav>
     <!-- end of navbar -->
 
-    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid container">
-            <a class="navbar-brand" href="#">Click Fit</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Collection</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                </ul>
-
-                <div class="d-flex navbar-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-
-                    <button class="btn btn-success" type="submit">Register</button>
-                </div>
-
-            </div>
-        </div>
-    </nav>
-     -->
-
     <!-- header -->
     <header
       id="header"
@@ -378,30 +339,105 @@
     </section>
     <!-- end of collection -->
 
-    <section class="container d-flex justify-content-between">
-      <div>
-        <h1 id="year" class="text-center">Hello Title</h1>
-        <h3 id="type">Year</h3>
-        <h2 id="number">Number</h2>
-        <p id="text">Type</p>
+    <!-- Upload Image Section start -->
+
+    <section>
+      <div class="title text-center">
+        <h2 class="position-relative d-inline-block my-5">Upload Image</h2>
       </div>
+      <div class="container d-flex justify-content-between">
+        <div class="w-50 m-2">
+          <div class="form-group files">
+            <h6>Upload an Image</h6>
+            <form id="uploadForm" enctype="multipart/form-data">
+              <input
+                class="form-control"
+                type="file"
+                name="image"
+                accept=".jpg, .jpeg, .png"
+              />
+              <button class="btn btn-success mt-2" type="submit">Upload</button>
+              <button type="button">Upload</button>
+            </form>
+          </div>
+        </div>
 
-      <div>
-        <h1>Upload an Image</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-          <input type="file" name="image" accept=".jpg, .jpeg, .png" />
-          <button type="submit">Upload</button>
-        </form>
-
-        <!-- Display uploaded image here -->
-        <h2>Uploaded Image:</h2>
-        <img id="uploadedImage" src="" alt="Uploaded Image" />
-
-        <!-- Display upload status -->
-        <div id="uploadStatus"></div>
-        
+        <div class="w-50 m-2">
+          <!-- Display uploaded image here -->
+          <h6>Uploaded Image:</h6>
+          <div class="image-border"></div>
+          <!-- Display upload status -->
+          <div class="text-success" id="uploadStatus"></div>
+        </div>
       </div>
     </section>
+
+    <!-- Data fetching from the api -->
+    <section class="d-flex">
+      <div class="w-50"></div>
+
+      <div class="w-50">
+       <!--  <h6 class="text-primary fw-bold">
+          <span id="year"></span> | <span id="type"></span> |
+          <span id="number"></span>
+        </h6>
+        <p id="text">Type</p> -->
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="img/logo.png"
+              width="60%"
+              alt="Your Logo"
+              class="img-fluid my-3"
+            />
+            <h6 class="text-primary fw-bold">
+              <span id="year"></span> | <span id="type"></span> |
+              <span id="number"></span>
+            </h6>
+            <p id="text" class="pr-1">Type</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="my-3 text-primary">Pages</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="#">Home</a></li>
+              <li><a class="text-white" href="#">Collection</a></li>
+              <li><a class="text-white" href="#">About Us</a></li>
+              <li><a class="text-white" href="#">Shop</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="my-3 text-primary">Terms and Services</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="#">Terms and Conditions</a></li>
+              <li><a class="text-white" href="#">Our Services</a></li>
+              <li><a class="text-white" href="#">Live Chat</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="my-3 text-primary">Contact Us</h5>
+            <span class="d-flex align-items-center mb-2">
+              <i class="fas fa-phone fa-md"></i>
+              <p class="mx-3">(123) 456-7890</p>
+            </span>
+
+            <span class="d-flex align-items-center mb-2">
+              <i class="fas fa-envelope fa-md"></i>
+              <p class="mx-3">Email: info@example.com</p>
+            </span>
+
+            <span class="d-flex">
+              <i class="fas fa-map-marker-alt fa-md"></i>
+              <p class="mx-3">Address: 123 Main St, City, Country</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -414,5 +450,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Change background image of a div by clicking on the button
+        $("button").click(function () {
+          var imageUrl =
+            "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+          $(".image-border").css("background-image", "url(" + imageUrl + ")");
+        });
+      });
+    </script>
   </body>
 </html>
