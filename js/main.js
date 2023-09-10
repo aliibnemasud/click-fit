@@ -16,20 +16,19 @@ $(document).ready(function () {
     e.preventDefault();
     // Create a FormData object to send the file
     const formData = new FormData(this);
-
     $.ajax({
-      url: "http://localhost:5000/file",
+      url: "https://click-fit-server.taqiy.com/file",
       type: "POST",
       data: formData,
       processData: false,
       contentType: false,
       success: function (response) {
-        const image = `http://localhost:5000/images/${response.filename}`;
+        const image = `https://click-fit-server.taqiy.com/images/${response.filename}`;
 
         $(".image-border").css("background-image", "url(" + image + ")");
 
         // Display upload status
-        $("#uploadStatus").html(`File uploaded successfully. Path: ${image}`);
+        $("#uploadStatus").html(`<div> File uploaded successfully. Path: <a target="_blank" href="${image}">${image}</a> </div>`);
       },
       error: function (error) {
         // Display error message on failure
@@ -58,7 +57,7 @@ $(document).ready(function () {
       active: status,
     };
 
-    await fetch("http://localhost:5000/user/addUser", {
+    await fetch("https://click-fit-server.taqiy.com/user/addUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +80,7 @@ $(document).ready(function () {
 const table = document.getElementById("userTable");
 
 const fetchUsers = () => {
-  fetch("http://localhost:5000/user")
+  fetch("https://click-fit-server.taqiy.com/user")
     .then((res) => res.json())
     .then((data) => {
       data.map((user, index) => {
@@ -92,12 +91,12 @@ const fetchUsers = () => {
         <td>
           <div class="d-inline-block">
           <button onclick="showData(${
-            user?.id
+            user?.ID
           })" class="action-button"data-bs-toggle="modal" data-bs-target="#editModal">
               <i class="fas fa-edit"></i>
           </button>
           <button onclick="deleteUser(${
-            user?.id
+            user?.ID
           })" class="action-button">
               <i class="fas fa-trash-alt"></i>
           </button>
@@ -114,7 +113,7 @@ fetchUsers();
 
 let updateId;
 const showData = async (data) => {
-  await fetch(`http://localhost:5000/user/getUser/${data}`)
+  await fetch(`https://click-fit-server.taqiy.com/user/getUser/${data}`)
     .then((res) => res.json())
     .then((data) => {
       $("#eemail").val(data[0]?.email);
@@ -122,7 +121,7 @@ const showData = async (data) => {
       $("#etype").val(data[0]?.type);
       $("#estatus").val(data[0]?.active);
 
-      updateId = data[0]?.id;
+      updateId = data[0]?.ID;
     });
 };
 
@@ -141,7 +140,7 @@ $(document).ready(
       active: status,
     };
 
-    fetch(`http://localhost:5000/user/updateUser/${updateId}`, {
+    fetch(`https://click-fit-server.taqiy.com/user/updateUser/${updateId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -168,7 +167,7 @@ const deleteUser = async (data) => {
   console.log(data)
 
   if (confirm) {
-    await fetch(`http://localhost:5000/user/deleteUser/${data}`, {
+    await fetch(`https://click-fit-server.taqiy.com/user/deleteUser/${data}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

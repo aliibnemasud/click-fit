@@ -25,6 +25,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
     <!-- custom css -->
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
@@ -107,20 +115,20 @@
     <!-- header -->
     <header
       id="header"
-      class="vh-100 carousel slide"
+      class="carousel slide mt-5"
       data-bs-ride="carousel"
       style="padding-top: 104px"
     >
       <div class="container h-100 d-flex align-items-center carousel-inner">
         <div class="text-center carousel-item active">
-          <h2 class="text-capitalize text-white">best collection</h2>
-          <h1 class="text-uppercase py-2 fw-bold text-white">new arrivals</h1>
-          <a href="#" class="btn mt-3 text-uppercase">shop now</a>
+          <h2 class="text-capitalize animate__animated animate__bounceInLeft animate__slower">best collection</h2>
+          <h1 class="text-uppercase py-2 fw-bold text-primary animate__animated animate__backInRight animate__slower">new arrivals</h1>
+          <a href="#" class="btn mt-3 text-uppercase animate__animated animate__backInUp animate__slower">shop now</a>
         </div>
         <div class="text-center carousel-item">
-          <h2 class="text-capitalize text-white">Rest price & offer</h2>
-          <h1 class="text-uppercase py-2 fw-bold text-white">new season</h1>
-          <a href="#" class="btn mt-3 text-uppercase">buy now</a>
+          <h2 class="text-capitalize text-primary animate__animated animate__backInRight animate__slower">Rest price & offer</h2>
+          <h1 class="text-uppercase py-2 fw-bold animate__animated animate__bounceInLeft animate__slower">new season</h1>
+          <a href="#" class="btn mt-3 text-uppercase animate__animated animate__backInUp animate__slower">buy now</a>
         </div>
       </div>
 
@@ -143,11 +151,61 @@
     </header>
     <!-- end of header -->
 
+    <!-- category section start -->
+    <section id="collection" class="py-5">
+      <div class="container">
+        <div class="title text-center my-5">
+          <h2 class="position-relative d-inline-block animate__fadeInUp animate__slower animate__animated">Category Section</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2">
+            <div style="width: 270px; background-color: aliceblue;">
+              <h1 class="p-4 text-uppercase fw-bold text-center">Football</h1>
+            </div>
+            <div class="my-2"></div> 
+            <div>
+              <img src="img/category/cat1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse">
+            <div >
+              <img src="img/category/cat2.png" alt="">
+            </div>
+            <div class="my-2"></div>
+            <div style="width: 270px; background-color: aliceblue;">
+              <h1 class="p-4 text-uppercase fw-bold text-center">Basket Ball</h1>
+            </div>            
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2">
+            <div style="width: 270px; background-color: aliceblue;">
+              <h1 class="p-4 text-uppercase fw-bold text-center">Car Sport</h1>
+            </div>
+            <div class="my-2"></div>  
+            <div>
+              <img src="img/category/cat3.png" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse">
+            <div>
+              <img src="img/category/cat4.png" alt="">
+            </div>
+            <div class="my-2"></div>
+            <div style="width: 270px; background-color: aliceblue;">
+              <h1 class="p-4 text-uppercase fw-bold text-center">Table Tennis</h1>
+            </div>            
+          </div>
+        </div>
+    </section>
+    <!-- category section end -->
+
     <!-- collection -->
     <section id="collection" class="py-5">
       <div class="container">
         <div class="title text-center">
-          <h2 class="position-relative d-inline-block">Products Collection</h2>
+          <h2 class="position-relative d-inline-block animate__fadeInUp animate__slower animate__animated">Products Collection</h2>
         </div>
 
         <div class="row g-0">
@@ -381,6 +439,8 @@
     </section>
     <!-- Upload Image Section end -->
 
+    
+
     <!-- Add User Section -->
     <section id="addUser" class="container my-5">
       <div class="title text-center">
@@ -510,8 +570,8 @@
                     />
                     
                   </div>
-                </div>
-      
+                </div> 
+
                 <div class="d-flex justify-content-between gap-2">
                   <div class="mb-3 w-50">
                     <label for="type" class="form-label">Type</label>
@@ -619,6 +679,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
