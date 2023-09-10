@@ -25,9 +25,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <!-- waypoints -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
 
     <!-- Animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -39,7 +38,7 @@
   </head>
 
   <body>
-    <!-- navbar -->
+    <!---------------------------- Navbar start ---------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
       <div class="container">
         <a
@@ -110,9 +109,9 @@
         </div>
       </div>
     </nav>
-    <!-- end of navbar -->
+    <!---------------------------- Navbar End ---------------------------->
 
-    <!-- header -->
+    <!---------------------------- Header start ---------------------------->
     <header
       id="header"
       class="carousel slide mt-5"
@@ -149,16 +148,17 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </header>
-    <!-- end of header -->
+    <!-------------------------- Header end -------------------------->
 
-    <!-- category section start -->
-    <section id="collection" class="py-5">
+    <!-------------------------- Category start -------------------------->
+    <section id="categroy" class="py-5">
       <div class="container">
         <div class="title text-center my-5">
-          <h2 class="position-relative d-inline-block animate__fadeInUp animate__slower animate__animated">Category Section</h2>
+          <h2 class="position-relative d-inline-block animate__animated animate__fadeInUp animate__slower ">Category Section</h2>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2">
+
+          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2 hidden fade_in_left">
             <div style="width: 270px; background-color: aliceblue;">
               <h1 class="p-4 text-uppercase fw-bold text-center">Football</h1>
             </div>
@@ -168,7 +168,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse">
+          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse hidden zoom_in">
             <div >
               <img src="img/category/cat2.png" alt="">
             </div>
@@ -178,7 +178,7 @@
             </div>            
           </div>
 
-          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2">
+          <div class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2 hidden zoom_in">
             <div style="width: 270px; background-color: aliceblue;">
               <h1 class="p-4 text-uppercase fw-bold text-center">Car Sport</h1>
             </div>
@@ -188,7 +188,7 @@
             </div>
           </div>
           
-          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse">
+          <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse hidden fade_in_right">
             <div>
               <img src="img/category/cat4.png" alt="">
             </div>
@@ -199,9 +199,9 @@
           </div>
         </div>
     </section>
-    <!-- category section end -->
+    <!---------------------------- Category end ---------------------------->
 
-    <!-- collection -->
+    <!-------------------------- Collection start -------------------------->
     <section id="collection" class="py-5">
       <div class="container">
         <div class="title text-center">
@@ -231,7 +231,7 @@
           </div>
 
           <div class="collection-list mt-4 row gx-0 gy-3">
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p1.png" class="w-100" />
                 <span
@@ -252,7 +252,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p2.png" class="w-100" />
                 <span
@@ -274,7 +274,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p3.png" class="w-100" />
                 <span
@@ -295,7 +295,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p4.png" class="w-100" />
                 <span
@@ -316,7 +316,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p5.png" class="w-100" />
                 <span
@@ -337,7 +337,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p6.png" class="w-100" />
                 <span
@@ -358,7 +358,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p7.png" class="w-100" />
                 <span
@@ -379,7 +379,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat hidden fade_in">
               <div class="collection-img position-relative">
                 <img src="img/products/p8.png" class="w-100" />
                 <span
@@ -399,13 +399,15 @@
                 <span class="fw-bold">$ 45.50</span>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
     </section>
-    <!-- end of collection -->
+    <!---------------------------- Collection end ---------------------------->
 
-    <!-- Upload Image Section start -->
+    <!---------------------------- Upload Image Section start ---------------------------->
     <section id="uploadImg">
       <div class="title text-center">
         <h2 class="position-relative d-inline-block my-5">Upload Image</h2>
@@ -437,11 +439,9 @@
         </div>
       </div>
     </section>
-    <!-- Upload Image Section end -->
+    <!---------------------------- Upload Image Section end ---------------------------->    
 
-    
-
-    <!-- Add User Section -->
+    <!---------------------------- Add User start ---------------------------->
     <section id="addUser" class="container my-5">
       <div class="title text-center">
         <h2 class="position-relative d-inline-block my-5">Add User</h2>
@@ -531,9 +531,9 @@
         </form>
       </div>
     </section>
-    <!-- Add Product Section -->
+    <!---------------------------- Add User end ---------------------------->
 
-    <!-- EditUser Modal start -->
+    <!---------------------------- EditUser Modal start ---------------------------->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -609,10 +609,10 @@
         </div>
       </div>
     </div>
-    <!-- EditUser Modal end -->
+    <!---------------------------- EditUser Modal end ---------------------------->
     
 
-    <!-- Footer Start -->
+    <!---------------------------- Footer Start ---------------------------->
     <footer class="bg-dark text-white py-4">
       <div class="container">
         <div class="row">
@@ -667,8 +667,10 @@
         </div>
       </div>
     </footer>
-    <!-- Footer End -->
+    <!---------------------------- Footer End ---------------------------->
 
+
+    <!---------- Bootstrap Cdn ---------->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -679,6 +681,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <!---------- Custom Js ---------->
     <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
   </body>
