@@ -183,15 +183,15 @@
           <h2
             class="position-relative d-inline-block animate__animated animate__fadeInUp animate__slower"
           >
-            Category Section
+            Category
           </h2>
         </div>
-        <div class="row">
+        <div class="row text-center">
           <div
-            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2 hiddenObject fade_in_left"
+            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between align-items-center my-2 hiddenObject fade_in_left"
           >
             <div style="width: 270px; background-color: aliceblue">
-              <h1 class="p-4 text-uppercase fw-bold text-center">Football</h1>
+              <h1 class="p-4 text-uppercase fw-bold text-center mx-auto">Football</h1>
             </div>
             <div class="my-2"></div>
             <div>
@@ -200,7 +200,7 @@
           </div>
 
           <div
-            class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse hiddenObject zoom_in"
+            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between align-items-center my-2 flex-lg-column flex-md-column hiddenObject zoom_in"
           >
             <div>
               <img src="img/category/cat2.png" alt="" />
@@ -214,7 +214,7 @@
           </div>
 
           <div
-            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between my-2 hiddenObject zoom_in"
+            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between align-items-center my-2 hiddenObject zoom_in"
           >
             <div style="width: 270px; background-color: aliceblue">
               <h1 class="p-4 text-uppercase fw-bold text-center">Car Sport</h1>
@@ -226,7 +226,7 @@
           </div>
 
           <div
-            class="col-lg-3 col-md-6 col-12 d-flex justify-content-between my-2 flex-lg-column flex-md-column flex-sm-column-reverse hiddenObject fade_in_right"
+            class="col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-between align-items-center my-2 flex-lg-column flex-md-column hiddenObject fade_in_right"
           >
             <div>
               <img src="img/category/cat4.png" alt="" />
@@ -472,8 +472,10 @@
       <div class="title text-center">
         <h2 class="position-relative d-inline-block my-5">Upload Image</h2>
       </div>
-      <div class="container d-flex justify-content-between">
-        <div class="w-50 m-2">
+
+      <div class="row mx-auto container">
+        
+        <div class="col-lg-6 col-md-12 col-12">
           <div class="form-group files">
             <h6>Upload an Image</h6>
             <form id="uploadForm" enctype="multipart/form-data">
@@ -490,13 +492,14 @@
           </div>
         </div>
 
-        <div class="w-50 m-2">
+        <div class="col-lg-6 col-12">
           <!-- Display uploaded image here -->
           <h6>Uploaded Image:</h6>
           <div class="image-border"></div>
           <!-- Display upload status -->
           <div class="text-success" id="uploadStatus"></div>
         </div>
+
       </div>
     </section>
     <!---------------------------- Upload Image Section end ---------------------------->
@@ -507,8 +510,8 @@
         <h2 class="position-relative d-inline-block my-5">Add User</h2>
       </div>
 
-      <div class="d-flex gap-4">
-        <div class="users-table w-50 overflow-scroll">
+      <div class="row gap-4">
+        <div class="users-table col-lg-6 col-md-12 col-12 overflow-scroll">
           <table id="userTable" class="table table-striped">
             <thead>
               <tr>
@@ -524,7 +527,7 @@
           </table>
         </div>
 
-        <form id="myForm" class="w-50 mx-auto">
+        <form id="myForm" class="col-lg-5 col-md-12 col-12 mx-auto">
           <div class="d-flex justify-content-between gap-2">
             <div class="mb-3 w-50">
               <label for="exampleFormControlInput1" class="form-label"
