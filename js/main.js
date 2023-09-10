@@ -11,39 +11,10 @@ const fetchData = () => {
 
 fetchData();
 
-$(document).ready(function () {
-  $("#uploadForm").submit(function (e) {
-    e.preventDefault();
-    // Create a FormData object to send the file
-    const formData = new FormData(this);
-    $.ajax({
-      url: "https://click-fit-server.taqiy.com/file",
-      type: "POST",
-      data: formData,
-      processData: false,
-      contentType: false,
-      success: function (response) {
-        const image = `https://click-fit-server.taqiy.com/images/${response.filename}`;
-
-        $(".image-border").css("background-image", "url(" + image + ")");
-
-        // Display upload status
-        $("#uploadStatus").html(`<div> File uploaded successfully. Path: <a target="_blank" href="${image}">${image}</a> </div>`);
-      },
-      error: function (error) {
-        // Display error message on failure
-        $("#uploadStatus").html("Error: " + error.responseText);
-      },
-    });
-  });
-});
-
-// add data to the MySql Database
-
+// Add User
 $(document).ready(function () {
   $("#myForm").submit(async function (e) {
     e.preventDefault();
-
     // Get values from form fields
     let email = $("#email").val();
     let password = $("#password").val();
@@ -70,13 +41,13 @@ $(document).ready(function () {
         $("#password").val("");
         $("#type").val("");
         $("#status").val("");
-        // alert("Product Added Successfully!!!");
-        location.reload()
+        location.reload();
       });
   });
 });
 
-/// Get all User
+/// Get all User show table
+
 const table = document.getElementById("userTable");
 
 const fetchUsers = () => {
@@ -95,9 +66,7 @@ const fetchUsers = () => {
           })" class="action-button"data-bs-toggle="modal" data-bs-target="#editModal">
               <i class="fas fa-edit"></i>
           </button>
-          <button onclick="deleteUser(${
-            user?.ID
-          })" class="action-button">
+          <button onclick="deleteUser(${user?.ID})" class="action-button">
               <i class="fas fa-trash-alt"></i>
           </button>
         </div>
@@ -125,7 +94,7 @@ const showData = async (data) => {
     });
 };
 
-// Hello
+// Update User
 
 $(document).ready(
   $("#updatedUser").click(function () {
@@ -149,23 +118,15 @@ $(document).ready(
     })
       .then((res) => res.json())
       .then((data) => {
-        /* $("#eemail").val("");
-        $("#epassword").val("");
-        $("#etype").val("");
-        $("#estatus").val(""); */
         $("#editModal").modal("hide");
-        location.reload()
+        location.reload();
       });
   })
 );
 
-// delete a user
-
+// Delete a user
 const deleteUser = async (data) => {
   const confirm = window.confirm("Want to Delete this user?");
-
-  console.log(data)
-
   if (confirm) {
     await fetch(`https://click-fit-server.taqiy.com/user/deleteUser/${data}`, {
       method: "DELETE",
@@ -175,7 +136,7 @@ const deleteUser = async (data) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        location.reload()
+        location.reload();
       });
   }
 };

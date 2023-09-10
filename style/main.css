@@ -99,6 +99,7 @@ p {
     color: #fff!important;
     border-color: var(--pink)!important;
 }
+
 .filter-button-group .btn:hover{
     color: #fff!important;
 }
@@ -109,7 +110,6 @@ p {
     height: 46px;
     border-radius: 50%;
 }
-
 
 .users-table {
     height: 300px;
@@ -124,18 +124,9 @@ p {
     color: rgb(189, 3, 3);
 }
 
-
-
-/* .newsSection {
-    background-color: #EBEEF3;    
-} */
-
 .newsBackground {
-    background: url(../img/news/cycling.png) top/cover no-repeat; 
-    
+    background: url(../img/news/cycling.png) top/cover no-repeat;    
 }
-
-
 
 
 /* media queries */
@@ -145,11 +136,6 @@ p {
     }
 }
 
-@media(min-width: 775px){
-    #nav-btns {
-        display: none;
-    }
-}
 
 
 
