@@ -13,8 +13,6 @@ body {
   height: 70vh;
 }
 
-
-
 /* drag and drop css start */
 
 .files input {
@@ -72,6 +70,6 @@ body {
 }
 
 
-.hidden{
+.hiddenObject{
 	opacity: 0;
 }

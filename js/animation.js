@@ -21,7 +21,7 @@ $(document).ready(function(){
 	},{offset:'50%'});
 
 	$('.fade_in').waypoint(function(direction) {
-		zoomIn(this.element, direction);
+		fadeIn(this.element, direction);
 	},{offset:'50%'});
 
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 			setTimeout(function(){
     		$(target).removeClass("animate__animated animate__fadeInDown animate__slower");
-    		$(target).removeClass("hidden");
+    		$(target).removeClass("hiddenObject");
     	}, 3000);
         
 		}
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 			setTimeout(function(){
     		$(target).removeClass("animate__animated animate__fadeInLeft animate__slower");
-    		$(target).removeClass("hidden");
+    		$(target).removeClass("hiddenObject");
     	}, 3000);        
 		}
     }
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 			setTimeout(function(){
     		$(target).removeClass("animate__animated animate__fadeInRight animate__slower");
-    		$(target).removeClass("hidden");
+    		$(target).removeClass("hiddenObject");
     	}, 3000);        
 		}
     }
@@ -67,18 +67,20 @@ $(document).ready(function(){
 
 			setTimeout(function(){
     		$(target).removeClass("animate__animated animate__slideInUp animate__slower");
-    		$(target).removeClass("hidden");
+    		$(target).removeClass("hiddenObject");
     	}, 3000);        
 		}
     }
     const zoomIn = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__zoomIn animate__slower');
+            $(target).removeClass("hiddenObject");
 
-			setTimeout(function(){
+			/* setTimeout(function(){
     		$(target).removeClass("animate__animated animate__zoomIn animate__slower");
-    		$(target).removeClass("hidden");
-    	}, 3000);        
+    		
+    	}, 3000); */
+
 		}
     }
 
@@ -88,12 +90,9 @@ $(document).ready(function(){
 
 			setTimeout(function(){
     		$(target).removeClass("animate__animated animate__fadeIn animate__slower");
-    		$(target).removeClass("hidden");
+    		$(target).removeClass("hiddenObject");
     	}, 3000);        
 		}
-    }
-
-
-	
+    }	
 
 });
