@@ -29,12 +29,7 @@ $(document).ready(function(){
 	const fadeInDown = (target, direction) => {
 		if(direction === "down"){
 			$(target).addClass('animate__animated animate__fadeInDown animate__slower');
-
-			setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__fadeInDown animate__slower");
-    		$(target).removeClass("hiddenObject");
-    	}, 3000);
-        
+			$(target).removeClass("hiddenObject");        
 		}
 	};
 
@@ -42,56 +37,34 @@ $(document).ready(function(){
     const fadeInLeft = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__fadeInLeft animate__slower');
-
-			setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__fadeInLeft animate__slower");
-    		$(target).removeClass("hiddenObject");
-    	}, 3000);        
+			$(target).removeClass("hiddenObject");     
 		}
     }
 
     const fadeInRight = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__fadeInRight animate__slower');
-
-			setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__fadeInRight animate__slower");
-    		$(target).removeClass("hiddenObject");
-    	}, 3000);        
+			$(target).removeClass("hiddenObject");       
 		}
     }
 
     const slideInUp = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__slideInUp animate__slower');
-
-			setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__slideInUp animate__slower");
-    		$(target).removeClass("hiddenObject");
-    	}, 3000);        
+			$(target).removeClass("hiddenObject");		       
 		}
     }
     const zoomIn = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__zoomIn animate__slower');
             $(target).removeClass("hiddenObject");
-
-			/* setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__zoomIn animate__slower");
-    		
-    	}, 3000); */
-
 		}
     }
 
     const fadeIn = (target, direction) => {
         if(direction === "down"){
 			$(target).addClass('animate__animated animate__fadeIn animate__slower');
-
-			setTimeout(function(){
-    		$(target).removeClass("animate__animated animate__fadeIn animate__slower");
-    		$(target).removeClass("hiddenObject");
-    	}, 3000);        
+			$(target).removeClass("hiddenObject");			     
 		}
     }	
 

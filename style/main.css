@@ -126,10 +126,28 @@ p {
 
 
 
+/* .newsSection {
+    background-color: #EBEEF3;    
+} */
+
+.newsBackground {
+    background: url(../img/news/cycling.png) top/cover no-repeat; 
+    
+}
+
+
+
+
 /* media queries */
 @media(min-width: 992px){
     .nav-item{
         border-bottom: none;
+    }
+}
+
+@media(min-width: 775px){
+    #nav-btns {
+        display: none;
     }
 }
 
